@@ -1,3 +1,5 @@
+let menuItems = ["Mariscos","Vegetariana","Carne y Polloyon"]
+
 /*Esta funcion permite obtener el valor del select de html(onchange)*/
 let originalPrice;
 let ivaCalculate;
@@ -68,12 +70,17 @@ function buildPaella(){
 
 	console.log("Precio Original " + originalPrice);
 	console.log("Precio Iva " + ivaCalculate);
-	
+
 	var car = new buildShoppingCar(factory.type, paellaProduct)
+/*
 	for (var i = 0; i < aux.length; i++) {
 		if(aux[i] == car){ addit = true}
 		else{ addit = false}
 	}
 	if(addit == true){ aux.push(car) }
-	console.log(aux)
+*/
+	console.log(car)
+ 	
+ 	var item = new executeDecorator(menuItems)
+ 	console.log(item)
 }
