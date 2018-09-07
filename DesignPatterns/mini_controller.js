@@ -1,4 +1,4 @@
-let menuItems = ["Mariscos","Vegetariana","Carne y Polloyon"]
+let menuItems = ["Mariscos","Vegetariana","Carne y Pollo"]
 
 /*Esta funcion permite obtener el valor del select de html(onchange)*/
 let originalPrice;
