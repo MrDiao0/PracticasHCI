@@ -19,14 +19,15 @@
 </head>
 <body>
 	<div class="container">
-		<div class="row">
+		<div class="row">	
 			<div class="col-md-2"></div>
 			<div class="col-md-8">
 				<h1 style="text-align: center; margin-top: 50px;">Restaurante Javeriana</h1>
 				<h3 style="text-align: center;">Menú especial</h3>
 				<form>
 				<table>
-					<div class="form-group" style="float: right; height: 200px; width: 49%">
+				<div class="row">
+					<div class="col-md-4">
 						<label form="selectControl">Paella</label>
 						<select multiple class="form-control" id="paellaType" onchange="getValueType(this)">
 					      <option value="Mariscos">Mariscos</option>
@@ -34,18 +35,19 @@
 					      <option value="CarnePollo">Carne y pollo</option>
 					    </select>
 					</div>
-					<div class="form-group" style="height: 200px; width: 50%;">
+					<div class="col-md-4">
 						<p>Paella (RadioButton)<br></p>
 						<form action="">
-						  <input type="radio" value="Mariscos"> Mariscos <br>
-						  <input type="radio" value="Vegetariana"> Vegetariana <br> 
-						  <input type="radio" value="CarnePollo"> Carne y Pollo <br><br>
+						  <input type="checkbox" value="Mariscos"> Mariscos <br>
+						  <input type="checkbox" value="Vegetariana"> Vegetariana <br> 
+						  <input type="checkbox" value="CarnePollo"> Carne y Pollo <br><br>
 						</form>
 					</div>
-					<div class="form-group" style="height: 200px; width: 49%;">
+					<div class="col-md-4">
 						<label>Paella (TxtBox)</label>
 						<input type="text" class="form-control" placeholder="Mariscos, Vegetariana, Carne y Pollo" onchange="getValueType(this)">
 					</div>
+				</div>
 				</table>
 
 					<div class="form-group">

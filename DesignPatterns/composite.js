@@ -39,11 +39,12 @@ function buildShoppingCar(type,product){//tipo de producto, producto){
 
     var car = new shoppingCar(type); 
     var resultCar;
-    resultCar = car.compositeProto().add(product);
+    car.compositeProto().add(product)
     /*
+    resultCar = car.compositeProto().add(product);
     for (var i = 0; i<=product.length; i++) {
         resultCar = car.compositeProto().add(product);
     }
 */
-    return resultCar;
+    return car;
 }
