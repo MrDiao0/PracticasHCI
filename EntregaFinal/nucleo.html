@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Matricula</title>
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<body>
+	<div class="row" style="background-color: lightgray">
+		<div class="col-md-2"></div>
+		<div class="col-md-1">
+			<img src="src/logoPUJ.png" style="width: 100%">
+		</div>
+		<div class="col-md-9">
+			<br><p style="font-size: 200%">Matriculas e inscripciones del medio</p>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-1"></div>
+			<div class="col-md-2">
+				<label>Nombre: </label>
+				<label id="name">NAME</label>
+				<br>
+				<label>ID: </label>
+				<label id="identity">123</label>
+			</div>
+			<div class="col-md-2">
+				<br><a href="main.html"><button class="btn btn-secondary btn-lg btn-block">Inicio</button></a>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-5">
+					<form style="width: 100%">
+					<br><div class="row" style="background-color: lightgray">
+					<div class="col-md-3"><h4>Filtros: </h4></div>
+					<div class="col-md-4">
+						<div class="custom-control custom-radio">
+							<input type="radio" value="filter1" id="filter1" name="filter" onchange="getValuefilter(this); return false;" class="custom-control-input">
+							<label class="custom-control-label" for="filter1">Materias disponibles</label>
+						</div>
+						<div class="custom-control custom-radio">
+							<input type="radio" value="filter2" id="filter2" name="filter" onchange="getValuefilter(this); return false;" class="custom-control-input">
+							<label class="custom-control-label" for="filter2">Materias no disponibles</label>
+						</div>
+					</div>
+					<div class="col-md-5"><br><button class="btn btn-secondary" onclick="applyFilter(); return false;">Aplicar filtros</button></div>
+					</form>
+					<div class="col-md-12" style="background-color: lightgray;">
+					<form>
+						<div class="form-group">
+						<br><label form="selectControl">Seleccione para matricular:</label>
+						<select multiple class="form-control" id="Materia" onchange="getValueM(this);return false;">
+					      
+					    </select>
+						</div>
+						<label>L: Lunes - M: Martes - Mi: Miercoles - J: Jueves - V: Viernes</label>
+						<div class="row">
+						<div class="col-md-4"></div>
+						<div class="col-md-4" style="height: 50px">
+						<button class="btn btn-secondary" onclick="matricular(); return false;" >Matricular</button><br>
+						</div>
+						<div class="col-md-4"></div>
+						</div>
+					</form>
+					</div>
+				</div>
+			</div>
+			<div class="col-md-1"></div>
+			<div class="col-md-6">
+				<br>
+
+				<table class="table table-striped">
+				  <thead class="thead-dark">
+				    <tr>
+				      <th scope="col">Hora</th>
+				      <th scope="col">Lunes</th>
+				      <th scope="col">Martes</th>
+				      <th scope="col">Miercoles</th>
+				      <th scope="col">Jueves</th>
+				      <th scope="col">Viernes</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				    <tr>
+				      <th scope="row">07:00 - 08:00</th>
+				      <td id="l7">-</td>
+				      <td id="m7">-</td>
+				      <td id="mi7">-</td>
+				      <td id="j7">-</td>
+				      <td id="v7">-</td>
+				    </tr>
+				    <tr>
+				      <th scope="row">08:00 - 09:00</th>
+				      <td id="l8">-</td>
+				      <td id="m8">-</td>
+				      <td id="mi8">-</td>
+				      <td id="j8">-</td>
+				      <td id="v8">-</td>
+				    </tr>
+				    <tr>
+				      <th scope="row">09:00 - 10:00</th>
+				      <td id="l9">-</td>
+				      <td id="m9">-</td>
+				      <td id="mi9">-</td>
+				      <td id="j9">-</td>
+				      <td id="v9">-</td>
+				    </tr>
+				    <tr>
+				      <th scope="row">10:00 - 11:00</th>
+				      <td id="l10">-</td>
+				      <td id="m10">-</td>
+				      <td id="mi10">-</td>
+				      <td id="j10">-</td>
+				      <td id="v10">-</td>
+				    </tr>
+				    <tr>
+				      <th scope="row">11:00 - 12:00</th>
+				      <td id="l11">-</td>
+				      <td id="m11">-</td>
+				      <td id="mi11">-</td>
+				      <td id="j11">-</td>
+				      <td id="v11">-</td>
+				    </tr>
+				    <tr>
+				      <th scope="row">12:00 - 13:00</th>
+				      <td id="l12">-</td>
+				      <td id="m12">-</td>
+				      <td id="mi12">-</td>
+				      <td id="j12">-</td>
+				      <td id="v12">-</td>
+				    </tr>
+				    <th scope="row">13:00 - 14:00</th>
+				      <td id="l13">-</td>
+				      <td id="m13">-</td>
+				      <td id="mi13">-</td>
+				      <td id="j13">-</td>
+				      <td id="v13">-</td>
+				  </tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="nucleo.js"></script>
+</body>
+</html>
